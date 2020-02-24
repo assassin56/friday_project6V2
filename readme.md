@@ -13,21 +13,27 @@ _https://github.com/assassin56/friday_project6V2/_
 
 ## SPEC Sheet
 
+* If user's request cannot fetch API call.
+  * Input: Hello
+  * Output: Error message
 * User receives list of recommended doctors
-  * Input: Runny nose (ailment).
-    * Doctor's names.
+  * Input: Cold (ailment).
+  * Output:    
+      * List of Doctors:
       * First, last name.
       * Address.
       * Phone number.
       * Website.
-      * Whether or not they are accepting new patients (API provided.)
-  * Output: List of doctors in their city to treat their issue.
-* Correct error handling
-  * Input: API call
-  * Output: If errornous call, a notification should inform the user of the error
-* Return statement indicating there are no doctors that match the criteria
-  * Input: Ailment; Doctor name.
-  * Output: "There are no doctors for this query at this time. Try again later."
+      * Whether or not they are accepting new patients.
+* User enters a doctor's name. 
+  * Input: James
+  * Output: Return a list of doctors by that name.
+* User enters a city and state.
+  * Input: Portland, OR.
+  * Output: List of doctors in that area.
+* User enters an ailment that no doctors are avaiable to treat.
+  * Input: The Black Plague.
+  * Output: 'There are no results to display at this time.'
 
 ## Setup/Installation Requirements
 

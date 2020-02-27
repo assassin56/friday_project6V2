@@ -6,9 +6,7 @@
 
 ## Description
 
-_Link to github repo_
-
-_https://github.com/assassin56/friday_project6V2/_
+_This is a website that allows a user to enter in a text field a symptom they may be experiencing as a result of being sick. The user is also able to search directly for Doctors they may have in mind. Upon submission, a list of doctors in te Portland area should appear and if they are accepting patients in that time._
 
 
 ## SPEC Sheet
@@ -37,6 +35,7 @@ _https://github.com/assassin56/friday_project6V2/_
 
 ## Setup/Installation Requirements
 
+### INCLUDE INSTRUCTIONS TO USE WEBPACK'S SERVER AND API KEY
 * Clone this repo by selecting the "clone or download" button. This will allow you to copy the repo's link.
 * While on the command line in your terminal, enter "git clone" followed by the copied url.
 * Enter "ls" to show a list of files and documents. One of them will be labeled "friday_project5. Use "cd" followed by the project directory name to navigate there. 

@@ -1,15 +1,14 @@
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
-import { Doc } from './doctor.js'
+// import './styles.css';
+import { Doc } from './doctor.js';
 
 
 $(document).ready(function () {
   $("form#docSearch").submit(function(event) {
     event.preventDefault();
     const name = $("#inputDoc").val();
-    const location = $("#inputCity").val();
 
     (async () => {
       let doctor = new Doc;
@@ -25,12 +24,12 @@ $(document).ready(function () {
         $("ul#docResult").text('There are no results to display at this time.');
       } else if (response.data.length > 0) {
         for (let i = 0; i <= response.data.length; i++) {
-          response.data.forEach(function() {
-            $("ul#docResult").append('<li>${doctor.profile.first_name} ${doctor.profile.last_name} <br> ${doctor.practices[i].visit_address.city} <br> ${doctor.practices[i].visit_address.state} <br> ${doctor.practices[i].visit_address.street} <br> ${doctor.practices[i].visit_address.zip} <br>  Accepts new patients: ${doctor.practices[i].accepts_new_patients} <br> Phone: ${doctor.practices[i].phones[0].number}</li>');
+          response.data.forEach(function(doctor) {
+            $("ul#docResult").append(`<li>${doctor.profile.first_name} ${doctor.profile.last_name} <br> ${doctor.practices[i].visit_address.city} <br> ${doctor.practices[i].visit_address.state} <br> ${doctor.practices[i].visit_address.street} <br> ${doctor.practices[i].visit_address.zip} <br>  Accepts new patients: ${doctor.practices[i].accepts_new_patients} <br> Phone: ${doctor.practices[i].phones[0].number}</li>`);
           });
         }
       }
-    }
+    };
   });
 
   $("form#symptoms").submit(function(event) {
@@ -50,11 +49,11 @@ $(document).ready(function () {
         $("ul#docResult").append('There are no results to display at this time.');
       } else if (response.data.length > 0) {
         for (let i = 0; i <= response.data.length; i++) {
-          response.data.forEach(function () {
-            $("ul#docResult").append('<li>${doctor.profile.first_name} ${doctor.profile.last_name} <br> ${doctor.practices[i].visit_address.city} <br> ${doctor.practices[i].visit_address.state} <br> ${doctor.practices[i].visit_address.street} <br> ${doctor.practices[i].visit_address.zip} <br>  Accepts new patients: ${doctor.practices[i].accepts_new_patients} <br> Phone: ${doctor.practices[i].phones[0].number}</li>')
+          response.data.forEach(function (doctor) {
+            $("ul#docResult").append(`<li>${doctor.profile.first_name} ${doctor.profile.last_name} <br> ${doctor.practices[i].visit_address.city} <br> ${doctor.practices[i].visit_address.state} <br> ${doctor.practices[i].visit_address.street} <br> ${doctor.practices[i].visit_address.zip} <br>  Accepts new patients: ${doctor.practices[i].accepts_new_patients} <br> Phone: ${doctor.practices[i].phones[0].number}</li>`);
           }); 
         }
       }
-    }
+    };
   });
 });

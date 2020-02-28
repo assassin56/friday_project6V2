@@ -11,7 +11,7 @@ $(document).ready(function () {
     const name = $("#inputDoc").val();
 
     (async () => {
-      let doctor = new Doc;
+      let doctor = new Doc();
       let response = await doctor.findDoctor(name, location);
 
       fetchElements(response);
@@ -37,7 +37,7 @@ $(document).ready(function () {
     const currentSymptom = $("#currentSymptom").val();
 
     (async () => {
-      let doctor = new Doc;
+      let doctor = new Doc();
       let response = await doctor.symptoms(currentSymptom);
       fetchElements(response);
     })();

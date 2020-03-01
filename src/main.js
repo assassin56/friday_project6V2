@@ -25,6 +25,9 @@ $(document).ready(function () {
       } else if (response.data.length > 0) {
           response.data.forEach(function (doctor) {
             $("ul#docResult").append(`<li>${doctor.profile.first_name} ${doctor.profile.last_name} <br> ${doctor.practices[0].visit_address.city} <br> ${doctor.practices[0].visit_address.state} <br> ${doctor.practices[0].visit_address.street} <br> ${doctor.practices[0].visit_address.zip} <br>  Accepts new patients: ${doctor.practices[0].accepts_new_patients} <br> Phone: ${doctor.practices[0].phones[0].number} <br> ${doctor.practices[0].website} </li>`);
+            if (doctor.practices[0].website === undefined) {
+              return $("ul#docResult").append("This website information is not available");
+            }
           });
       }
     };
@@ -48,6 +51,9 @@ $(document).ready(function () {
       } else if (response.data.length > 0) {
           response.data.forEach(function (doctor) {
             $("ul#docResult").append(`<li>${doctor.profile.first_name} ${doctor.profile.last_name} <br> ${doctor.practices[0].visit_address.city} <br> ${doctor.practices[0].visit_address.state} <br> ${doctor.practices[0].visit_address.street} <br> ${doctor.practices[0].visit_address.zip} <br>  Accepts new patients: ${doctor.practices[0].accepts_new_patients} <br> Phone: ${doctor.practices[0].phones[0].number} ${doctor.practices[0].website} </li>`);
+            if (doctor.practices[0].website === undefined) {
+              return $("ul#docResult").append("This website information is not available");
+            }
           }); 
       }
     };

@@ -38,8 +38,19 @@ _This is a website that allows a user to enter in a text field a symptom they ma
 ### INCLUDE INSTRUCTIONS TO USE WEBPACK'S SERVER AND API KEY
 * Clone this repo by selecting the "clone or download" button. This will allow you to copy the repo's link.
 * While on the command line in your terminal, enter "git clone" followed by the copied url.
-* Enter "ls" to show a list of files and documents. One of them will be labeled "friday_project5. Use "cd" followed by the project directory name to navigate there. 
-* While in project directory, open the contents of the directory, or use "code ." to enable the shortcut to open in Visual Studio Code. 
+* Enter "ls" to show a list of files and documents. One of them will be labeled "friday_project6V2". Use "cd" followed by the project directory name to navigate there. 
+* While in project directory, open the contents of the directory, or use "code ." to enable the shortcut to open in Visual Studio Code.
+* Open your web browser to create an account with https://developer.betterdoctor.com/. You will need an account to have access to an API key they will send to your email.
+* Open email from BetterDoctor, and go the link, or copy the suggested API key.
+* Open the current window for Visual Studio Code.
+  1. Go to doctor.js file, and look for the API url beside the 'fetch' method.
+  2. At the end of the url is a 'user_key=' followed by a .env file link.
+  3. Remove the link entirely, all but 'user_key='.
+  4. Past the API key you recieved in your email where the .env file once was.
+  5. Repeat steps 1-4 to the second method in that class, down below.
+  6. Save the document.
+* Go back to terminal, run the command "npm run start" while in the root folder of the project.
+  7. A webpage should appear, and now you can enter any symptoms of illness or a particular doctor of your liking to the page to recieve care results.
 
 ## Known Bugs
 
